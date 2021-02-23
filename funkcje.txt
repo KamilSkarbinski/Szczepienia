@@ -1,0 +1,7 @@
+1 dodanie uzytkownika do bazy
+2 przydzielenie terminu szczepienia
+3 wyswitlenie szczegółów szczepienia
+4 anulowanie szczepienia
+5 wyswietlenie punktow szczepien
+6 szczegóły konta
+7 historia zgłoszeń(ile osob zarejestrowalo sie na szczepienie)
