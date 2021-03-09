@@ -34,13 +34,15 @@ if(isset($_POST['email'])){
     <div id="main">
         <div id="menu">
             <ul class="menu">
+                <li><a href="zarezerwuj.php">Wybierz termin</a></li>
+                <li><a href="szczegoly_konta.php">Szczegóły konta</a></li>
                 <li><a href="wyloguj.php">Wyloguj</a></li>
             </ul>
         </div>
         <div>
             <div class="container">   
                 <h1 class="main-title">Witaj w Panelu użytkownika <?php echo"$email"?></h1>
-
+                <img src="szczepionka.jpeg" alt="szczepionkacovid">
                 <footer class="footer">
                     Copyright © 2021 szczepienia
                 </footer>
