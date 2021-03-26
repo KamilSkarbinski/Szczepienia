@@ -3,44 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Szczegóły konta</title>
     
 
 </head>
 <body>
-    <form action="" method="POST">
-        <p>Podaj swój pesel, aby mieć dostęp do szczegółów swojego konta</p>
-        <input type = "number" name = "numer_id">
-        <p>Podaj hasło</p>
-        <input type = "password" name = "haslo_konta"> <br> <br>
-        <input type = "submit" name = "wyslij"> <br> <br>
-    </form>
+    <div id="menu">
+        <ul class="menu">
+            <li><a href="index.php">Strona główna</a></li>
+            <li><a href="wyloguj.php">Wyloguj</a></li>
+            <div id="menu_right">
+                <li id="login"><a href="szczegoly_konta.php"><img src="avatar.png" alt="Avatar" class="avatar"></a></li>
+            </div>
+        </ul>
+    </div>
+    <?php
+        session_start();
+        $_POST['login'] = $_SESSION['email'];
+        $base = mysqli_connect("127.0.0.1", "root", "", "szczepienia");
 
+        $sql = "SELECT `imie`,`nazwisko`,`wiek`,`pesel`,`email`,`haslo`,`nr_telefonu` FROM `dane_uzytkownika` WHERE email = '$_SESSION[email]'";
+
+        $zapytanie = mysqli_query($base, $sql);
+        while($row=mysqli_fetch_array($zapytanie)){
+            echo "<h1>Szczegóły twojego konta!</h1>
+            <table> 
+            <tr><td class='td-left'><b>Imię:</b></td> <td class='td-mid'>".$row[0]. "</td><td class='td-right'></td></tr>
+            <tr><td class='td-left'><b>Nazwisko:</b></td> <td class='td-mid'>".$row[1]. "</td><td class='td-right'></td></tr>
+            <tr><td class='td-left'><b>Wiek:</b></td> <td class='td-mid'>".$row[2]. "</td><td class='td-right'></td></tr>
+            <tr><td class='td-left'><b>Pesel:</b></td> <td class='td-mid'>".$row[3]. "</td><td class='td-right'></td></tr>
+            <tr><td class='td-left'><b>Email:</b></td> <td class='td-mid'>".$row[4]. "</td><td class='td-right'><form action='zmienemail.php' method='POST'><input type='hidden' value=$_SESSION[email] name='login'/><input class='edytuj' type='submit' value='Edytuj'/></form></td></tr>
+            <tr><td class='td-left'><b>Hasło:</b></td> <td class='td-mid'>".$row[5]. "</td><td class='td-right'><form action='zmienhaslo.php' method='POST'><input type='hidden' value=$_SESSION[email] name='login'/><input class='edytuj' type='submit' value='Edytuj'/></form></td></tr> 
+            <tr><td class='td-left'><b>Numer telefonu:</b></td> <td class='td-mid'>".$row[6]. "</td><td class='td-right'><form action='zmientel.php' method='POST'><input type='hidden' value=$_SESSION[email] name='login'/><input class='edytuj' type='submit' value='Edytuj'/></form></td></tr></h3>
+            </table>";
+        }
+
+        mysqli_close($base);
+    ?>
 </body>
 </html>
 
 <?php
-    if(isset($_POST['wyslij'])){
-        $pesel = $_POST['numer_id'];
-        $haslo =  $_POST['haslo_konta'];
-
-        $base = mysqli_connect("127.0.0.1", "root", "", "szczepienia");
-
-        $sql = "SELECT * FROM `dane_uzytkownika` WHERE pesel = '$pesel' AND haslo = '$haslo'";
-
-        $zapytanie = mysqli_query($base, $sql);
-        while($row=mysqli_fetch_array($zapytanie)){
-            echo "<h1>Szczegóły twojego konta!</h1> 
-            <h3>Twoje id (Zapamiętaj!): ".$row[0]."<br> 
-            Imię i nazwisko: ".$row[1]." ".$row[2]. " <a href = 'zmienimie.php'> Zmień imię</a><a href = 'zmiennazwisko.php'> Zmień nazwisko</a><br> 
-            Wiek w latach: ".$row[3]." <a href = 'zmienwiek.php'> Zmień wiek</a><br> 
-            Twój pesel: ".$row[4]. " <a href = 'zmienpesel.php'> Zmień PESEL</a> <br> 
-            Twój email: ".$row[5]. " <a href = 'zmienemail.php'> Zmień e-mail</a><br> 
-            Twoje hasło (Ważne!): ".$row[6]. " <a href = 'zmienhaslo.php'> Zmień hasło</a><br> 
-            Twój numer telefonu: ".$row[7]. " <a href = 'zmientel.php'> Zmień numer telefonu</a> </h3>";
-        }
-        
-
-        mysqli_close($base);
-}
 ?>
