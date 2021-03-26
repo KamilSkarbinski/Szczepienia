@@ -1,0 +1,101 @@
+/* STYL REJESTRACJA */
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    width: 120px;
+    height: 33px;
+    padding: 5px 10px;
+    border: 1px solid #3D5BEB;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background-color: #4976EB;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #3F4AF0;
+}
+a{
+    color: #3F4AF0;
+}
+a:hover{
+    color: #333;
+}
+
+
+.pole{
+    width: 35%;
+    padding: 5px;
+    margin-left: 15%;
+    margin-top: 10px;
+    display: block;
+    border: 1px solid silver;
+    outline: 5px solid #ebebeb;
+    font-size: 15px;
+}
+
+.pole:focus{
+    outline: 5px solid #e5f2f8;
+}
+h1{
+    text-align: center;
+    padding-top: 20px;
+}
+p{
+    margin-left: 10%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#form{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 0;
+}
+#czesc1{
+    width: 49.4%;
+    float: left;
+    border: 1px solid #5CA2F2;
+    letter-spacing: -1px;
+    box-shadow: 0 0 2px silver;
+    background-color: #f6f6f6;
+}
+#czesc2{
+    width: 49.3%;
+    float: right;
+    border: 1px solid #5CA2F2;
+    letter-spacing: -1px;
+    box-shadow: 0 0 2px silver;
+    background-color: #f6f6f6;
+}
+#dol{
+    width: auto;
+    padding: 13px 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #5CA2F2;
+}
+button{
+    width: 120px;
+    height: 33px;
+    padding: 0px 10px;
+    border: 1px solid #3D5BEB;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background-color: #4976EB;
+    border-radius: 5px;
+}
+.link{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+#komunikat{
+    margin-top: 20px;
+    margin-left: 38%;
+    position: absolute;
+}
