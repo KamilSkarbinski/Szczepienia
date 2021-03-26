@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* CENTER
+
+display:flex;
+justify-content:center;
+
+ */
+
+
+/* MENU */
+li{
+    display: inline;
+    float: left;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+li#login a{
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #95C7E6;
+}
+
+li a:hover{
+    background-color: #73BBFA;
+}
+
+/*awatar*/
+.avatar{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#menu_right{
+    float: right;
+}
+
+
+/* BOX */
+
+.box{
+    width:450px;
+    height: 300px;
+    background-color: #95C7E6;
+    text-align:center;
+    line-height: 300px;
+    color:white;
+    opacity:0.5;
+    transition:all 0.3s ease;
+    border: none;
+}
+
+.box:hover{
+    opacity:1;
+    cursor: pointer;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    border: none;
+}
+  
+/* zdjecie */
+
+.bg-img{
+    background-image: url("szczepionka.jpeg"); 
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+ }
+  
+.container{
+    position: relative;
+    display:flex;
+    justify-content:center;
+    padding: 16px;
+}
+
+input.box{
+    margin-top: 17%;
+    position: relative;
+}
+
+.footer{
+    text-align:center;
+    margin-bottom: 30px;
+}
+
+/* login */
+
+h1{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* SZCZEGÓŁY KONTA */
+table{
+    margin: auto;
+    border-collapse: collapse;
+    width: 75%; 
+    border: 1px solid #95C7E6; 
+    font-size: 18px;
+    box-shadow: 0 0 2px silver;
+}
+td{
+    padding: 5px;
+}
+
+.td-right{
+    text-align: right;
+    padding-right: 20px;
+}
+
+.td-mid{
+    padding-left: 7%;
+}
+
+.edytuj{
+    background-color: #6A87F5;
+    border: none;
+    color: white;
+    padding: 5px 16px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.edytuj:hover{
+    background-color: #496BF5;
+}
+
+#zmiana{
+    display: flex;
+    justify-content: center;
+    margin-top: 12%;
+}
+
+.pole{
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 30px;
+    display: block;
+    border: 1px solid silver;
+    outline: 5px solid #ebebeb;
+    font-size: 15px;
+}
+
+.pole:focus{
+    outline: 5px solid #e5f2f8;
+}
+
+b{
+    font-size: 150%;
+    margin-left: 2%;
+}
+
+form#edycja{
+    padding: 15px 15px;
+    width: 25%;
+    height: auto;
+    margin: auto;
+    background: #fff;
+    border: 1px solid silver;
+    letter-spacing: -1px;
+    box-shadow: 0 0 2px silver;
+    opacity:0.8;
+}
+
+.edytuj2{
+    background-color: #6A87F5;
+    border: none;
+    color: white;
+    padding: 5px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 65%;
+}
+.edytuj2:hover{
+    background-color: #496BF5;
+}
+p{
+    margin-top: 3%;
+    margin-left: 10%;
+}
