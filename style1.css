@@ -1,0 +1,88 @@
+/*STYL LOGOWANIE*/
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+#logowanie{
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+    max-width: 400px;
+    margin-top: 7%;
+}
+
+#container{
+    background-image: url("szczepionka2.jpg"); 
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+#form{
+    padding-top: 15px;
+    width: 350px;
+    height: 400px;
+    margin: auto;
+    background: #fff;
+    border: 1px solid silver;
+    letter-spacing: -1px;
+    box-shadow: 0 0 2px silver;
+    opacity:0.8;
+}
+
+.pole{
+    width: 75%;
+    padding: 15px;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    border: 1px solid silver;
+    outline: 5px solid #ebebeb;
+    font-size: 20px;
+}
+
+.pole:focus{
+    outline: 5px solid #e5f2f8;
+}
+
+#dol{
+    background-color: #5CA2F2;
+    width: 88.7%;
+    padding: 5px 20px;
+    padding-bottom: 20px;
+    margin-top: 3px;
+}
+button{
+    width: 120px;
+    height: 33px;
+    padding: 5px 10px;
+    border: 1px solid #3D5BEB;
+    color: white;
+    text-shadow: 0 0 1px black;
+    background-color: #4976EB;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #3F4AF0;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: #333;
+}
+b{
+    margin-left: 20px;
+    font-size: 180%;
+}
+#komunikat{
+    margin-top: 70px;
+    position: absolute;
+    color: white;
+}
