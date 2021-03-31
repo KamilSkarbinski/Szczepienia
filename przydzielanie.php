@@ -37,7 +37,7 @@
             $sql="SELECT dzien,godzina,miesiac,zajety,id from `dostepne_terminy` where miesiac= $mi and zajety = 0";
             $wynik=mysqli_query($db,$sql);
             while($row=mysqli_fetch_array($wynik)){
-                echo("<input type=\"checkbox\" name=\"data\" value=\"".$row['id'].",0".$row['dzien']." 0".$mi." ".$row['godzina']."\">".$row['dzien']." ".$row['godzina']."<br>");
+                echo("<input type=\"checkbox\" name=\"data\" value=\"".$row['id'].",".$row['dzien']." ".$mi." ".$row['godzina']."\">".$row['dzien']." ".$row['godzina']."<br>");
             }
             echo("<input type=\"submit\" name =\"zarezerwuj\" value=\"zarezerwuj\">");
             mysqli_close($db);
