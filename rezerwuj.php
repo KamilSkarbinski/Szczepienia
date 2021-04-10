@@ -2,7 +2,7 @@
 
 if (isset($_POST['date'])) {
   require "rezerwacja.php";
-   if($_RSV->res_count($_POST['date'], $_POST['slot'])<1){
+   if($_RSV->res_count($_POST['date'], $_POST['slot'])<20){
     if ($_RSV->save(
       $_POST['date'], $_POST['slot'], $_POST['name'],
       $_POST['email'], $_POST['tel'])) {
