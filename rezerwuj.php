@@ -1,16 +1,18 @@
 <?php
-// (A) PROCESS RESERVATION
+
 if (isset($_POST['date'])) {
   require "rezerwacja.php";
-  if ($_RSV->save(
-    $_POST['date'], $_POST['slot'], $_POST['name'],
-    $_POST['email'], $_POST['tel'], $_POST['notes'])) {
-     echo "<div class='ok'>Reservation saved.</div>";
-  } else { echo "<div class='err'>".$RESERVE->error."</div>"; }
+   if($_RSV->res_count($_POST['date'], $_POST['slot'])<1){
+    if ($_RSV->save(
+      $_POST['date'], $_POST['slot'], $_POST['name'],
+      $_POST['email'], $_POST['tel'])) {
+       echo "<div class='ok'>Rezerwacja złożona</div>";
+    } else { echo "<div class='err'>".$RESERVE->error."</div>"; }
+   }else{echo "<div class='full'>Termin zajęty</div>";}
 }
 ?>
 
-<!-- (B) RESERVATION FORM -->
+
 <h1>RESERVATION</h1>
 <form id="resForm" method="post" target="_self">
   <label for="res_name">Name</label>
