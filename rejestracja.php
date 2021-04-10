@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="syringe.png">
     <title>Rejestracja użytkownika</title>
 </head>
 <body>
@@ -25,7 +26,7 @@
                     </div>
                     <div id="czesc2">
                     <p>Adres Email</p>
-                    <input class="pole" type="text" name="email" required> <br/>
+                    <input class="pole" type="email" name="email" required> <br/>
                     <p>Podaj hasło</p>
                     <input class="pole" type="password" name="haslo" required> <br/>
                     <p>Powtórz hasło</p>

@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style1.css">
+    <link rel="shortcut icon" href="syringe.png">
     <title>Logowanie użytkownika</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <div id="logowanie">
             <div id="form">
                 <form action="index.php" method="POST">
-                    <b>Email:</b><br/><br/> <input class="pole" type="text" name="email" required><br/>
+                    <b>Email:</b><br/><br/> <input class="pole" type="email" name="email" required><br/>
                     <b>Hasło:</b><br/><br/> <input class="pole" type="password" name="haslo" required><br/><br/>
                     <br/>
                     <div id="dol">

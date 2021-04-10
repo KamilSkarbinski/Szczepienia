@@ -26,7 +26,8 @@ if(isset($_POST['email'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Strona główna</title>
+    <link rel="shortcut icon" href="syringe.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -47,7 +48,7 @@ if(isset($_POST['email'])){
             <h1>Witaj <?php echo $_SESSION['email']?></h1>
             <div class="bg-img">
                 <div class="container">
-                    <form action="przydzielanie.php" method="POST">
+                    <form action="rezerwuj.php" method="POST">
                         <input class="box" type="submit" value="Wybierz termin" style="font-size:36px">
                     </form>
                     <form action="szczegoly_konta" method="POST">
